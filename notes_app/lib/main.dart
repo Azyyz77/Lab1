@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'screens/home_screen.dart';
 import 'screens/notes_screen.dart';
 
-void main() {
+Future main() async {
+  // Load environment variables before running the app
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
